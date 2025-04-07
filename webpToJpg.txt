@@ -1,0 +1,9 @@
+::change file extension to .bat
+@echo off
+  pushd C:\exmasconv
+     for /f "delims=" %%i in ('dir /a-d/b/s *.txt') do ren "%%.webp" "%%~ni.jpg"
+  popd
+exit /b
+
+::method 2: click on window url bar, type cmd
+::REN file_name*.webp file_name*.jpg
